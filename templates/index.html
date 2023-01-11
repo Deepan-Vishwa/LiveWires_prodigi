@@ -29,8 +29,8 @@
         
           var temphum = data.payload.split(",");
           document.getElementById("gas").dataset.value = temphum[2];
-          document.getElementById("temp").dataset.value = temphum[0];
-          document.getElementById("hum").dataset.value = temphum[1];
+          document.getElementById("temp").dataset.value = temphum[1];
+          document.getElementById("hum").dataset.value = temphum[0];
           //$('#temp').text(temphum[0]);
           //$('#hum').text(temphum[1]);
       });

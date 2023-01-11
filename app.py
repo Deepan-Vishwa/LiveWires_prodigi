@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 
 
-app.config['MQTT_BROKER_URL'] = '192.168.0.185'
+app.config['MQTT_BROKER_URL'] = 'broker.hivemq.com'
 app.config['MQTT_BROKER_PORT'] = 1883
 app.config['MQTT_CLIENT_ID'] = 'mqtt-client'
 app.config['MQTT_KEEPALIVE'] = 65535
