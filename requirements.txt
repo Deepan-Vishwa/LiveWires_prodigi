@@ -5,3 +5,4 @@ Flask_MQTT==1.1.1
 python-socketio<4.3
 python-engineio<3.9
 Werkzeug==2.0.3
+Flask_SocketIO==4.3.1
