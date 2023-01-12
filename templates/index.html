@@ -28,9 +28,11 @@
           console.log(data)
         
           var temphum = data.payload.split(",");
-          document.getElementById("gas").dataset.value = temphum[2];
-          document.getElementById("temp").dataset.value = temphum[1];
-          document.getElementById("hum").dataset.value = temphum[0];
+          document.getElementById("gas").dataset.value = temphum[5];
+          document.getElementById("temp").dataset.value = temphum[4];
+          document.getElementById("hum").dataset.value = temphum[3];
+          document.getElementById("gl").dataset.value = temphum[6];
+
           //$('#temp').text(temphum[0]);
           //$('#hum').text(temphum[1]);
       });
@@ -57,7 +59,7 @@
       <source src="https://static.videezy.com/system/resources/previews/000/052/039/original/gas-stove.mp4" type="video/mp4">
     </video>
 
-    <div class="container text-center pt-5">
+    <div class="container text-center pt-2">
   <div class="row">
     <div class="col">
       <canvas id="gas" data-type="radial-gauge"
@@ -185,6 +187,29 @@
   ></canvas>
     </div>
   </div>
+</div>
+
+<div class="container-fluid d-flex justify-content-center pt-3">
+  <canvas id="gl" data-width="150" data-height="400" data-type="linear-gauge"
+  data-units="%"
+      data-value="20"
+      data-title="Gas Level"
+      data-min-value="0"
+      data-max-value="100"
+      data-major-ticks="[0,10,20,30,40,50,60,70,80,90,100]"
+      data-highlights='[ {"from": 0, "to": 50, "color": "#851101"},
+          {"from": 50, "to": 100, "color": "#12ab07"} ]'
+          data-color-major-ticks="#ddd"
+          data-color-title="#eee"
+      data-color-units="#ccc"
+      data-color-numbers="#eee"
+      data-color-plate="#222"
+      data-color-major-ticks="#ddd"
+      data-color-minor-ticks="#ddd"
+  
+  
+  ></canvas>
+  
 </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
